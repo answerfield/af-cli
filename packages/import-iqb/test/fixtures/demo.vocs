@@ -1,0 +1,239 @@
+{
+ "variableCodings": [
+  {
+   "id": "tf_1",
+   "alias": "01a",
+   "sourceType": "BASE",
+   "processing": [
+    "IGNORE_CASE",
+    "IGNORE_ALL_SPACES"
+   ],
+   "codes": [
+    {
+     "id": 1,
+     "type": "FULL_CREDIT",
+     "score": 1,
+     "ruleSets": [
+      {
+       "rules": [
+        {
+         "method": "MATCH",
+         "parameters": [
+          "Zähler\nder Zähler"
+         ]
+        }
+       ],
+       "ruleOperatorAnd": false
+      }
+     ],
+     "manualInstruction": "<p>Zähler</p>"
+    },
+    {
+     "id": 0,
+     "type": "RESIDUAL",
+     "score": 0,
+     "ruleSets": [],
+     "manualInstruction": "<p>Alle anderen Antworten</p>"
+    }
+   ]
+  },
+  {
+   "id": "radio_1",
+   "alias": "02a",
+   "sourceType": "BASE",
+   "codes": [
+    {
+     "id": 1,
+     "type": "FULL_CREDIT",
+     "score": 1,
+     "ruleSets": [
+      {
+       "rules": [
+        {
+         "method": "MATCH",
+         "parameters": [
+          "2"
+         ]
+        }
+       ],
+       "ruleOperatorAnd": false
+      }
+     ]
+    },
+    {
+     "id": 0,
+     "type": "RESIDUAL_AUTO",
+     "score": 0,
+     "ruleSets": []
+    }
+   ]
+  },
+  {
+   "id": "tfs_1",
+   "alias": "03a",
+   "sourceType": "BASE",
+   "codes": [
+    {
+     "id": 1,
+     "type": "FULL_CREDIT",
+     "score": 1,
+     "ruleSets": [
+      {
+       "rules": [
+        {
+         "method": "NUMERIC_MATCH",
+         "parameters": [
+          "6"
+         ]
+        }
+       ],
+       "ruleOperatorAnd": false
+      }
+     ]
+    },
+    {
+     "id": 0,
+     "type": "RESIDUAL_AUTO",
+     "score": 0,
+     "ruleSets": []
+    }
+   ]
+  },
+  {
+   "id": "row_1",
+   "alias": "04a",
+   "sourceType": "BASE",
+   "codes": [
+    {
+     "id": 1,
+     "type": "FULL_CREDIT",
+     "score": 1,
+     "ruleSets": [
+      {
+       "rules": [
+        {
+         "method": "MATCH",
+         "parameters": [
+          "1"
+         ]
+        }
+       ],
+       "ruleOperatorAnd": false
+      }
+     ]
+    },
+    {
+     "id": 0,
+     "type": "RESIDUAL_AUTO",
+     "score": 0,
+     "ruleSets": []
+    }
+   ]
+  },
+  {
+   "id": "row_2",
+   "alias": "04b",
+   "sourceType": "BASE",
+   "codes": [
+    {
+     "id": 1,
+     "type": "FULL_CREDIT",
+     "score": 1,
+     "ruleSets": [
+      {
+       "rules": [
+        {
+         "method": "MATCH",
+         "parameters": [
+          "2"
+         ]
+        }
+       ],
+       "ruleOperatorAnd": false
+      }
+     ]
+    },
+    {
+     "id": 0,
+     "type": "RESIDUAL_AUTO",
+     "score": 0,
+     "ruleSets": []
+    }
+   ]
+  },
+  {
+   "id": "04",
+   "alias": "04",
+   "sourceType": "SUM_CODE",
+   "deriveSources": [
+    "row_1",
+    "row_2"
+   ],
+   "codes": [
+    {
+     "id": 1,
+     "type": "FULL_CREDIT",
+     "score": 1,
+     "ruleSets": [
+      {
+       "rules": [
+        {
+         "method": "NUMERIC_MATCH",
+         "parameters": [
+          "2"
+         ]
+        }
+       ],
+       "ruleOperatorAnd": false
+      }
+     ]
+    },
+    {
+     "id": 0,
+     "type": "RESIDUAL_AUTO",
+     "score": 0,
+     "ruleSets": []
+    }
+   ]
+  },
+  {
+   "id": "check_1",
+   "alias": "05a",
+   "sourceType": "BASE",
+   "codes": [
+    {
+     "id": 1,
+     "type": "FULL_CREDIT",
+     "score": 1,
+     "ruleSets": [
+      {
+       "rules": [
+        {
+         "method": "IS_TRUE"
+        }
+       ],
+       "ruleOperatorAnd": false
+      }
+     ]
+    },
+    {
+     "id": 0,
+     "type": "RESIDUAL_AUTO",
+     "score": 0,
+     "ruleSets": []
+    }
+   ]
+  },
+  {
+   "id": "summe",
+   "alias": "summe",
+   "sourceType": "SUM_SCORE",
+   "deriveSources": [
+    "tf_1",
+    "radio_1",
+    "tfs_1"
+   ],
+   "codes": []
+  }
+ ]
+}

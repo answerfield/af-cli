@@ -1,0 +1,47 @@
+{
+  "name": "@answerfield/cli",
+  "version": "0.1.0",
+  "type": "module",
+  "bin": {
+    "af": "./bin/af.js"
+  },
+  "files": [
+    "out",
+    "!out/**/*.map",
+    "bin",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": {
+      "types": "./out/index.d.ts",
+      "af-source": "./src/index.ts",
+      "default": "./out/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@answerfield/bundle": "https://github.com/answerfield/af-format/releases/download/v0.1.0/answerfield-bundle-0.1.0.tgz",
+    "@answerfield/compiler": "https://github.com/answerfield/af-language/releases/download/v0.1.0/answerfield-compiler-0.1.0.tgz",
+    "@answerfield/language": "https://github.com/answerfield/af-language/releases/download/v0.1.0/answerfield-language-0.1.0.tgz",
+    "@answerfield/runtime-core": "https://github.com/answerfield/af-runtime/releases/download/v0.1.0/answerfield-runtime-core-0.1.0.tgz",
+    "langium": "~4.4.0",
+    "vscode-languageserver-textdocument": "~1.0.13"
+  },
+  "optionalDependencies": {
+    "@answerfield/export-typst": "0.1.0",
+    "@answerfield/import-iqb": "0.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "vitest": "^5.0.5"
+  },
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/answerfield/af-cli",
+    "directory": "packages/cli"
+  }
+}

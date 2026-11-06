@@ -1,0 +1,175 @@
+{
+ "type": "aspect-unit-definition",
+ "version": "4.10.0",
+ "stateVariables": [],
+ "pages": [
+  {
+   "alwaysVisible": true,
+   "sections": [
+    {
+     "elements": [
+      {
+       "id": "text_1",
+       "alias": "text_1",
+       "type": "text",
+       "position": {
+        "gridRow": 1,
+        "gridColumn": 1
+       },
+       "text": "<p>Lies den <strong>Text</strong> über <em>Brüche</em>.</p><ul><li>erster Punkt</li></ul>"
+      },
+      {
+       "id": "image_1",
+       "alias": "image_1",
+       "type": "image",
+       "position": {
+        "gridRow": 2,
+        "gridColumn": 1
+       },
+       "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==",
+       "alt": "Bild nicht gefunden",
+       "fileName": "kreis.png"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "sections": [
+    {
+     "elements": [
+      {
+       "id": "text_2",
+       "alias": "text_2",
+       "type": "text",
+       "position": {
+        "gridRow": 1,
+        "gridColumn": 1
+       },
+       "text": "<p>Wie heißt die Zahl über dem Bruchstrich?</p>"
+      },
+      {
+       "id": "tf_1",
+       "alias": "01a",
+       "type": "text-field",
+       "position": {
+        "gridRow": 2,
+        "gridColumn": 1
+       },
+       "label": ""
+      },
+      {
+       "id": "radio_1",
+       "alias": "02a",
+       "type": "radio",
+       "position": {
+        "gridRow": 3,
+        "gridColumn": 1
+       },
+       "label": "Welcher Bruch ist größer als 1/2?",
+       "options": [
+        {
+         "text": "2/5"
+        },
+        {
+         "text": "3/5"
+        }
+       ]
+      },
+      {
+       "id": "cloze_1",
+       "alias": "cloze_1",
+       "type": "cloze",
+       "position": {
+        "gridRow": 4,
+        "gridColumn": 1
+       },
+       "document": {
+        "type": "doc",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "Es sind "
+           },
+           {
+            "type": "TextField",
+            "attrs": {
+             "model": {
+              "id": "tfs_1",
+              "alias": "03a",
+              "type": "text-field-simple"
+             }
+            }
+           },
+           {
+            "type": "text",
+            "text": " Stunden."
+           }
+          ]
+         }
+        ]
+       }
+      },
+      {
+       "id": "likert_1",
+       "alias": "lik",
+       "type": "likert",
+       "position": {
+        "gridRow": 5,
+        "gridColumn": 1
+       },
+       "options": [
+        {
+         "text": "ja"
+        },
+        {
+         "text": "nein"
+        }
+       ],
+       "rows": [
+        {
+         "id": "row_1",
+         "alias": "04a",
+         "type": "likert-row",
+         "rowLabel": {
+          "text": "<p>Aussage A</p>"
+         }
+        },
+        {
+         "id": "row_2",
+         "alias": "04b",
+         "type": "likert-row",
+         "rowLabel": {
+          "text": "<p>Aussage B</p>"
+         }
+        }
+       ]
+      },
+      {
+       "id": "check_1",
+       "alias": "05a",
+       "type": "checkbox",
+       "position": {
+        "gridRow": 6,
+        "gridColumn": 1
+       },
+       "label": "trifft zu"
+      },
+      {
+       "id": "frame_1",
+       "alias": "frame_1",
+       "type": "frame",
+       "position": {
+        "gridRow": 7,
+        "gridColumn": 1
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

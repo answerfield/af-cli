@@ -1,0 +1,21 @@
+{
+  "name": "af-cli",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/export-typst",
+    "packages/import-iqb",
+    "packages/cli"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "test": "npm run typecheck && npm test --workspaces --if-present",
+    "typecheck": "tsc -b"
+  },
+  "engines": {
+    "node": ">=22.12"
+  },
+  "devDependencies": {
+    "typescript": "~6.0.2"
+  }
+}

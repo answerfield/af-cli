@@ -1,0 +1,14 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "packages/export-typst"
+    },
+    {
+      "path": "packages/import-iqb"
+    },
+    {
+      "path": "packages/cli"
+    }
+  ]
+}

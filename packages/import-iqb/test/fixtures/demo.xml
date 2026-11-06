@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<Unit>
+  <Metadata>
+    <Id>DEMO1</Id>
+    <Label>Demo</Label>
+  </Metadata>
+  <DefinitionRef player="iqb-player-aspect@2.11" editor="iqb-editor-aspect@2.11">demo.voud</DefinitionRef>
+  <CodingSchemeRef schemer="iqb-schemer@2.5" schemeType="iqb@3.0">demo.vocs</CodingSchemeRef>
+</Unit>
